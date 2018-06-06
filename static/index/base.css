@@ -1,0 +1,31 @@
+nav.navbar{
+    background-color: #003863;
+}
+a.navbar-brand {
+    color: aliceblue!important;
+}
+h3.title-head {
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+}
+div.information {
+    margin-top: 30px;
+}
+div.btn-group {
+    float: right!important;
+}
+/* 页面底部样式 */
+.footer{
+    border-top:2px solid #003863;
+    margin-bottom:10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.foot_link{text-align:center;margin-top:30px;}
+.foot_link a,.foot_link span{color:#4e4e4e;}
+.foot_link a:hover{color:#ff8800}
+.foot_link span{padding:0 10px}
+.footer p{text-align:center; margin-top:10px;}

@@ -1,0 +1,121 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电工系论文管理系统</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="base.css"> -->
+    <link rel="stylesheet" href="{% static 'index/base.css' %}"> 
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{% static 'jquery-3.2.1.js' %}"></script>
+
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-home"></span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <img src="{% static 'index/img/bar-slogan.png' %}" alt="" style="margin-top: 5px;">
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <img src="{% static 'index/img/Logo.png' %}">
+                    <h3 class="title-head">电工系论文管理系统</h3>
+                </div>
+            </div>
+        </div>
+        <hr style="margin-bottom: 30px;margin-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">
+                        注册认证 <span class="glyphicon glyphicon-edit" style="top: 2px;"></span>
+                    </a>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            登录系统 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'login' %}">教师登陆</a></li>
+                            <li><a href="{% url 'login' %}">学生登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container information">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-1 col-xs-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-envelope">&nbsp;</span>通知公告
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>啦啦啦</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-file">&nbsp;</span>相关文档
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>啦啦啦</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="foot_link">
+        <a href="#">学校首页</a>
+        <span>|</span>
+        <a href="#">联系我们</a>
+        <span>|</span>
+        <a href="#">教务系统</a>
+        <span>|</span>
+        <a href="#">友情链接</a>
+    </div>
+    <p style="color:crimson;">如有任何问题请联系管理员 zwz2650744@gmail.com</p>
+    <p>CopyRight © 2018 智能科技创新协会 All Rights Reserved</p>
+</div>
+</body>
+</html>

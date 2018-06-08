@@ -2,11 +2,16 @@ from django.shortcuts import render
 from rbac.views import permission
 
 
-def student_center(request):
+@permission
+def student_center(request, *args, **kwargs):
+    action_list = kwargs.get('action_list')
+    menu_string = kwargs.get('menu_string')
     username = request.session['user_info']['username']
     context = {}
     context['username'] = username
-    return render(request, 'student_center/student_center.html', context)
+    response = render(request, 'student_center/student_center.html', context)
+    response.set_cookie('role', 'student')
+    return response
 
 
 def thesis_list(request):

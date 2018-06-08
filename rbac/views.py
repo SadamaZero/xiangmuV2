@@ -180,7 +180,7 @@ class MenuHelper(object):
         # }
         for k,v in self.permission2action_dict.items():
             if re.match(k,self.current_url):
-                action_list = v # ['GET',POST,]
+                action_list = v  # ['GET',POST,]
                 break
 
         return action_list
@@ -227,12 +227,15 @@ def login(request):
                 return redirect('/teacher')
 
         else:
-            return redirect('/login')
+            context = {'error': 1}
+            return render(request, 'login.html', context)
 
 
 def logout(request):
     request.session.clear()
-    return redirect('/')
+    response = redirect('/')
+    response.delete_cookie('role')
+    return response
 
 # @permission
 # def index(request,*args,**kwargs):

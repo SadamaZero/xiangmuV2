@@ -56,23 +56,32 @@
         <hr style="margin-bottom: 30px;margin-top: 30px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">
-                        注册认证 <span class="glyphicon glyphicon-edit" style="top: 2px;"></span>
-                    </a>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            登录系统 <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'login' %}">教师登陆</a></li>
-                            <li><a href="{% url 'login' %}">学生登录</a></li>
-                        </ul>
+                {% if login_state == 'student' %}
+                    <div style="text-align: center">
+                        <a class="btn btn-primary btn-lg" href="/student/" role="button">
+                            进入系统
+                        </a>
                     </div>
-                </div>
+                {% else %}
+                    <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            注册认证 <span class="glyphicon glyphicon-edit" style="top: 2px;"></span>
+                        </a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                登录系统 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'login' %}">教师登陆</a></li>
+                                <li><a href="{% url 'login' %}">学生登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
+
 
         <div class="container information">
             <div class="row">

@@ -55,7 +55,7 @@ class Permission(models.Model):
     # http://127.0.0.1:8001/user.html  用户管理 1
     # http://127.0.0.1:8001/order.html 订单管理 1
     caption = models.CharField(max_length=32)
-    url = models.CharField(max_length=32)
+    url = models.CharField(max_length=100)
     menu = models.ForeignKey(Menu,null=True,blank=True, on_delete=models.DO_NOTHING)
     class Meta:
         verbose_name_plural = 'URL表'
